@@ -9,10 +9,13 @@
   (let* ((prefix "%%MVB+")
          (processed-vars
            (mapcar (lambda (var)
-                     (if (string= (symbol-name var) "_") (gensym prefix) var))
+                     (if (string= (symbol-name var) "_")
+                         (gensym prefix)
+                         var))
                    vars))
          (ignored-vars (remove-if-not (lambda (var)
-                                        (string-prefix-p prefix (symbol-name var)))
+                                        (string-prefix-p prefix
+                                                         (symbol-name var)))
                                       processed-vars)))
     `(multiple-value-bind ,processed-vars ,values
        ,@(if ignored-vars `((declare (ignore ,@ignored-vars))))
