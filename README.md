@@ -10,8 +10,8 @@ MULTIPLE-VALUE-BIND-PLUS>
  (multiple-value-bind+ (a _ b)
      (values 1 2 3)
    (values a b))
-1
-3
+;; 1
+;; 3
 ```
 
 ## Credits
