@@ -1,6 +1,9 @@
 MULTIPLE-VALUE-BIND+
 ===================
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Common Lisp](https://img.shields.io/badge/Common%20Lisp-library-orange.svg)](https://common-lisp.net/)
+
 `MULTIPLE-VALUE-BIND+` macro is a macro similar to standard `MULTIPLE-VALUE-BIND`
 but with support for `_` placeholder symbols which are ignored.
 
